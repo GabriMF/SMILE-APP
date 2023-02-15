@@ -8,24 +8,22 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "patients")
-public class Patients {
-
+@Table(name = "treatments")
+public class Treatments {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_patient")
+    @Column(name = "id_treatments")
     private Long id;
     @Column(name = "dni")
     private String dni;
-    @Column(name = "name")
-    private String name;
-    @Column(name = "last_name")
-    private String lastName;
-    public Patients(String dni, String name, String lastName) {
+    @Column(name = "treatments")
+    private String treatments;
+
+    public Treatments(String dni, String treatments) {
         this.dni = dni;
-        this.name = name;
-        this.lastName = lastName;
+        this.treatments = treatments;
     }
+
     public Long getId() {
         return id;
     }
@@ -38,18 +36,10 @@ public class Patients {
     public void setDni(String dni) {
         this.dni = dni;
     }
-    public String getName() {
-        return name;
+    public String getTreatments() {
+        return treatments;
     }
-    public void setName(String name) {
-        this.name = name;
+    public void setTreatments(String treatments) {
+        this.treatments = treatments;
     }
-    public String getLastName() {
-        return lastName;
-    }
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-    
-
 }
