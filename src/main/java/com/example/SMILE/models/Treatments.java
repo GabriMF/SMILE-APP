@@ -1,5 +1,7 @@
 package com.example.SMILE.models;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -42,4 +44,6 @@ public class Treatments {
     public void setTreatments(String treatments) {
         this.treatments = treatments;
     }
+
+  
 }
