@@ -26,11 +26,14 @@ public class TreatmentsController {
     public TreatmentsController(TreatmentsService service) {
         this.service = service;
     }
+
     @GetMapping(path = "")
     public List<Treatments> getAll() {
         return service.getAll();
     }
+    
     @PostMapping(value = "")
+
     @ResponseStatus(value = HttpStatus.CREATED)
     public ResponseEntity<?> store(@RequestBody Treatments newTreatments) {
         try {
@@ -39,13 +42,9 @@ public class TreatmentsController {
             return ResponseEntity.status(500).body("Error");
         }
     }
-    // @DeleteMapping(path = "/{id}")
-    // public List<Treatments> delete(@PathVariable Long id){
-    //     return service.delete(id);
-    // }
-          
-       
-    
 
-    
+    @DeleteMapping(path = "/{id}")
+    public List<Treatments> delete(@PathVariable Long id){
+        return service.delete(id);
+    }
 }

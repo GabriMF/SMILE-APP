@@ -32,4 +32,9 @@ public class TreatmentsService {
         return null;
     }
 
+    public List<Treatments> delete(Long id){
+        repository.deleteById(id);
+        return repository.findAll();
+    }
+
 }
