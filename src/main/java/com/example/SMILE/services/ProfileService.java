@@ -28,4 +28,9 @@ public class ProfileService {
     public static Optional <Profiles> findById(Long id){
         return null;
     }
+
+    public List<Profiles> delete(Long id){
+        repository.deleteById(id);
+        return repository.findAll();
+    }
 }

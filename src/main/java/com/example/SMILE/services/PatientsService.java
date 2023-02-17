@@ -28,4 +28,9 @@ public class PatientsService {
     public static Optional <Patients> findById(Long id){
         return null;
     }
+    
+    public List<Patients> delete(Long id){
+        repository.deleteById(id);
+        return repository.findAll();
+    }
 }

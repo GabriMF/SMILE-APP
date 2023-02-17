@@ -28,4 +28,9 @@ public class CitiesService {
     public static Optional <Cities> findById(Long id){
         return null;
     }
+
+    public List<Cities> delete(Long id){
+        repository.deleteById(id);
+        return repository.findAll();
+    }
 }
