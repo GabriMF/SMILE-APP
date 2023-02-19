@@ -31,7 +31,7 @@ public class PatientsController {
     public List<Patients> getAll() {
         return service.getAll();
     }
-    
+
     @PostMapping(value = "")
 
     @ResponseStatus(value = HttpStatus.CREATED)
@@ -45,6 +45,6 @@ public class PatientsController {
 
     @DeleteMapping(path = "/{id}")
     public List<Patients> delete(@PathVariable Long id){
-        return service.delete(id);
+    return service.delete(id);
     }
 }

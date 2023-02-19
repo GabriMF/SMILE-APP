@@ -28,16 +28,16 @@ public class CitiesController {
     }
 
     @GetMapping(path = "")
-    public List<Cities> getAll() {
+    public List<Cities> index() {
         return service.getAll();
     }
     
     @PostMapping(value = "")
 
     @ResponseStatus(value = HttpStatus.CREATED)
-    public ResponseEntity<?> store(@RequestBody Cities newTreatments) {
+    public ResponseEntity<?> store(@RequestBody Cities newCities) {
         try {
-            return ResponseEntity.ok(service.save(newTreatments));
+            return ResponseEntity.ok(service.save(newCities));
         } catch (Exception e) {
             return ResponseEntity.status(500).body("Error");
         }

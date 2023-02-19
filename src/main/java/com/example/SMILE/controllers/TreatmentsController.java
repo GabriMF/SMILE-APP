@@ -21,6 +21,7 @@ import org.springframework.http.ResponseEntity;
 @RequestMapping(path = "/api/treatments")
 
 public class TreatmentsController {
+
     private TreatmentsService service;
 
     public TreatmentsController(TreatmentsService service) {
@@ -31,7 +32,7 @@ public class TreatmentsController {
     public List<Treatments> getAll() {
         return service.getAll();
     }
-    
+
     @PostMapping(value = "")
 
     @ResponseStatus(value = HttpStatus.CREATED)
@@ -45,6 +46,6 @@ public class TreatmentsController {
 
     @DeleteMapping(path = "/{id}")
     public List<Treatments> delete(@PathVariable Long id){
-        return service.delete(id);
+    return service.delete(id);
     }
 }

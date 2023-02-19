@@ -3,7 +3,9 @@ import java.util.List;
 import java.util.Optional;
 import com.example.SMILE.models.Cities;
 import com.example.SMILE.repositories.CitiesRepository;
+import org.springframework.stereotype.Service;
 
+@Service
 public class CitiesService {
     private CitiesRepository repository;
 

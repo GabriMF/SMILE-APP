@@ -1,9 +1,13 @@
 package com.example.SMILE.services;
 import java.util.List;
 import java.util.Optional;
+
+import org.springframework.stereotype.Service;
+
 import com.example.SMILE.models.Patients;
 import com.example.SMILE.repositories.PatientsRepository;
 
+@Service
 public class PatientsService {
     private PatientsRepository repository;
 

@@ -21,6 +21,10 @@ public class Patients {
     private String name;
     @Column(name = "last_name")
     private String lastName;
+
+    
+    public Patients() {
+    }
     public Patients(String dni, String name, String lastName) {
         this.dni = dni;
         this.name = name;

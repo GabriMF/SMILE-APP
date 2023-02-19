@@ -31,7 +31,7 @@ public class ProfileController {
     public List<Profiles> getAll() {
         return service.getAll();
     }
-    
+
     @PostMapping(value = "")
 
     @ResponseStatus(value = HttpStatus.CREATED)
@@ -45,6 +45,6 @@ public class ProfileController {
 
     @DeleteMapping(path = "/{id}")
     public List<Profiles> delete(@PathVariable Long id){
-        return service.delete(id);
+    return service.delete(id);
     }
 }

@@ -28,6 +28,10 @@ public class Profiles {
     @Column(name = "address")
     private String address;
 
+    
+    public Profiles() {
+    }
+
     public Profiles(String dni, String name, String lastName, int age, int phoneNumber, String address) {
         this.dni = dni;
         this.name = name;

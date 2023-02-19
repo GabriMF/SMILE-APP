@@ -20,6 +20,9 @@ public class Cities {
     @Column(name = "cities")
     private String cities;
     
+    public Cities() {
+    }
+
     public Cities(String dni, String cities) {
         this.dni = dni;
         this.cities = cities;

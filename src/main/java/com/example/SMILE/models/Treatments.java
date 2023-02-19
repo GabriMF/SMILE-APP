@@ -19,6 +19,9 @@ public class Treatments {
     @Column(name = "treatments")
     private String treatments;
 
+    public Treatments() {
+    }
+
     public Treatments(String dni, String treatments) {
         this.dni = dni;
         this.treatments = treatments;
@@ -27,21 +30,25 @@ public class Treatments {
     public Long getId() {
         return id;
     }
+
     public void setId(Long id) {
         this.id = id;
     }
+
     public String getDni() {
         return dni;
     }
+
     public void setDni(String dni) {
         this.dni = dni;
     }
+
     public String getTreatments() {
         return treatments;
     }
+
     public void setTreatments(String treatments) {
         this.treatments = treatments;
     }
 
-  
 }
