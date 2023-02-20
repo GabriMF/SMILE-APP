@@ -3,6 +3,9 @@ import java.util.List;
 import java.util.Optional;
 import com.example.SMILE.models.Cities;
 import com.example.SMILE.repositories.CitiesRepository;
+
+import org.apache.catalina.startup.ClassLoaderFactory.Repository;
+import org.springframework.data.repository.support.Repositories;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -27,7 +30,7 @@ public class CitiesService {
         return citiesSaved;
     }
 
-    public static Optional <Cities> findById(Long id){
+    public Cities findById(Long id){
         return null;
     }
 
