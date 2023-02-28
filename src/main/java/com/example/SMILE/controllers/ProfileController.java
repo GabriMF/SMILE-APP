@@ -44,7 +44,7 @@ public class ProfileController {
     }
 
     @DeleteMapping(path = "/{id}")
-    public List<Profiles> delete(@PathVariable Long id){
-    return service.delete(id);
+    public List<Profiles> delete(@PathVariable Long id) {
+        return service.delete(id);
     }
 }
