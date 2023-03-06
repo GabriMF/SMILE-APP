@@ -28,8 +28,8 @@ public class TreatmentsService {
         return treatmentsSaved;
     }
 
-    public static Optional <Treatments> findById(Long id){
-        return null;
+    public Treatments findById(Long id){
+        return repository.findById(id).orElse(null);
     }
 
     public List<Treatments> delete(Long id){

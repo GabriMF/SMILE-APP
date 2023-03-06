@@ -2,10 +2,13 @@ package com.example.SMILE.controllers;
 
 import java.util.List;
 
+import javax.management.relation.RelationNotFoundException;
+
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -42,6 +45,18 @@ public class TreatmentsController {
         } catch (Exception e) {
             return ResponseEntity.status(500).body("Error");
         }
+    }
+
+    @PutMapping(path = "/{id}")
+    public ResponseEntity<Treatments> replaceTreatments(@PathVariable(name = "id") Long id, @RequestBody Treatments treatments) throws RelationNotFoundException {
+        Treatments currentTreatments = service.findById(id);
+        if (currentTreatments == null) {
+            return ResponseEntity.notFound().build();
+        }
+        currentTreatments.setDni(treatments.getDni());
+          
+        final Treatments replaceTreatments = service.save(currentTreatments);
+        return ResponseEntity.ok(replaceTreatments);
     }
 
     @DeleteMapping(path = "/{id}")
