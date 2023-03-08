@@ -1,11 +1,10 @@
 package com.example.SMILE.services;
 import java.util.List;
-import java.util.Optional;
+
 import com.example.SMILE.models.Cities;
 import com.example.SMILE.repositories.CitiesRepository;
 
-import org.apache.catalina.startup.ClassLoaderFactory.Repository;
-import org.springframework.data.repository.support.Repositories;
+
 import org.springframework.stereotype.Service;
 
 @Service
@@ -31,7 +30,7 @@ public class CitiesService {
     }
 
     public Cities findById(Long id){
-        return null;
+        return repository.findById(id).orElse(null);
     }
 
     public List<Cities> delete(Long id){

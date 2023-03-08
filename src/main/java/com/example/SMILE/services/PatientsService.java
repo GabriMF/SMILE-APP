@@ -1,6 +1,6 @@
 package com.example.SMILE.services;
 import java.util.List;
-import java.util.Optional;
+
 
 import org.springframework.stereotype.Service;
 
@@ -29,8 +29,8 @@ public class PatientsService {
         return patientsSaved;
     }
 
-    public static Optional <Patients> findById(Long id){
-        return null;
+    public Patients findById(Long id){
+        return repository.findById(id).orElse(null);
     }
     
     public List<Patients> delete(Long id){
