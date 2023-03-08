@@ -1,6 +1,5 @@
 package com.example.SMILE.services;
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 import com.example.SMILE.models.Treatments;
